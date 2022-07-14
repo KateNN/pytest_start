@@ -1,23 +1,9 @@
-import pytest
-
 from src.Rectangle import Rectangle
 
 
-def test_rectangle_creation_normal():
-    """Check creating a rectangle with sides 3 and 6 (positive numbers)"""
+def test_rectangle_creation():
+    """Check creating a rectangle with sides 3 and 6"""
     Rectangle(3, 6)
-
-
-def test_rectangle_creation_negative_side():
-    """Side cannot be a negative number"""
-    with pytest.raises(ValueError):
-        Rectangle(3, -4)
-
-
-def test_rectangle_creation_wrong_value_side():
-    """Side cannot be a tuple"""
-    with pytest.raises(ValueError):
-        Rectangle(10, (1, 2, 3))
 
 
 def test_rectangle_perimeter_calculation():

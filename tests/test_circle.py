@@ -1,23 +1,9 @@
-import pytest
-
 from src.Circle import Circle
 
 
-def test_circle_creation_normal():
-    """Check creating a circle with radius = 4 (positive number)"""
+def test_circle_creation():
+    """Check creating a circle with radius = 4"""
     Circle(4)
-
-
-def test_circle_creation_negative_radius():
-    """Radius cannot be a negative number"""
-    with pytest.raises(ValueError):
-        Circle(-2)
-
-
-def test_circle_creation_wrong_value_radius():
-    """Radius cannot be a string"""
-    with pytest.raises(ValueError):
-        Circle("abc")
 
 
 def test_circle_perimeter_calculation():

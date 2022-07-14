@@ -4,9 +4,13 @@ from src.Figure import Figure
 class Square(Figure):
     NAME = "Square"
 
-    def __init__(self, side):
-        if isinstance(side, (int, float)) and side > 0:
-            self.area = side ** 2
-            self.perimeter = side * 4
-        else:
-            raise ValueError("Side length must be a positive number")
+    def __init__(self, a):
+        self.a = a
+
+    @property
+    def area(self):
+        return self.a ** 2
+
+    @property
+    def perimeter(self):
+        return self.a * 4

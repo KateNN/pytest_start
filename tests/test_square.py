@@ -1,23 +1,9 @@
-import pytest
-
 from src.Square import Square
 
 
-def test_square_creation_normal():
-    """Check creating a square with side = 4 (positive number)"""
+def test_square_creation():
+    """Check creating a square with side = 4"""
     Square(4)
-
-
-def test_square_creation_negative_side():
-    """Side cannot be a negative number"""
-    with pytest.raises(ValueError):
-        Square(-2)
-
-
-def test_square_creation_wrong_value_side():
-    """Side cannot be a list"""
-    with pytest.raises(ValueError):
-        Square([1, 3, 5])
 
 
 def test_square_perimeter_calculation():
